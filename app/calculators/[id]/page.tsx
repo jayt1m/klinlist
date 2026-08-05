@@ -29,6 +29,16 @@ import QsofaCalc from "@/components/calculators/qsofa";
 import CentorCalc from "@/components/calculators/centor";
 import BsaCalc from "@/components/calculators/bsa";
 import ApgarCalc from "@/components/calculators/apgar";
+import KillipCalc from "@/components/calculators/killip";
+import MeldNaCalc from "@/components/calculators/meld-na";
+import GenevaScoreCalc from "@/components/calculators/geneva-score";
+import FenaCalc from "@/components/calculators/fena";
+import OttawaAnkleCalc from "@/components/calculators/ottawa-ankle";
+import AsaPsCalc from "@/components/calculators/asa-ps";
+import IpssCalc from "@/components/calculators/ipss";
+import Phq9Calc from "@/components/calculators/phq9";
+import BishopScoreCalc from "@/components/calculators/bishop-score";
+import AuditCCalc from "@/components/calculators/audit-c";
 import { notFound } from "next/navigation";
 import { getCalculator } from "@/lib/getCalculator";
 
@@ -71,6 +81,16 @@ const calculatorComponents: Record<string, ComponentType> = {
   "centor": CentorCalc,
   "bsa": BsaCalc,
   "apgar": ApgarCalc,
+  "killip": KillipCalc,
+  "meld-na": MeldNaCalc,
+  "geneva-score": GenevaScoreCalc,
+  "fena": FenaCalc,
+  "ottawa-ankle": OttawaAnkleCalc,
+  "asa-ps": AsaPsCalc,
+  "ipss": IpssCalc,
+  "phq9": Phq9Calc,
+  "bishop-score": BishopScoreCalc,
+  "audit-c": AuditCCalc,
 };
 
 export default async function CalculatorPage({ params }: Props) {

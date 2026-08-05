@@ -312,4 +312,104 @@ export const calculators: Calculator[] = [
   icon: "Activity",
   color: "blue",
 },
+ {
+  id: "killip",
+  title: "Killip",
+  description:
+    "Класс острой сердечной недостаточности при инфаркте миокарда",
+  specialty: "Кардиология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "meld-na",
+  title: "MELD-Na",
+  description:
+    "Тяжесть заболевания печени и приоритизация листа ожидания трансплантации",
+  specialty: "Гастроэнтерология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "geneva-score",
+  title: "Пересмотренная Женевская шкала",
+  description:
+    "Клиническая вероятность ТЭЛА на основе объективных критериев",
+  specialty: "Пульмонология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "fena",
+  title: "FeNa",
+  description:
+    "Фракционная экскреция натрия — дифференциальная диагностика ОПП",
+  specialty: "Нефрология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "ottawa-ankle",
+  title: "Ottawa Ankle Rules",
+  description:
+    "Показания к рентгенографии при травме голеностопа и стопы",
+  specialty: "Травматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "asa-ps",
+  title: "ASA",
+  description:
+    "Класс физического статуса пациента перед операцией",
+  specialty: "Анестезиология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "ipss",
+  title: "IPSS",
+  description:
+    "Выраженность симптомов нижних мочевыводящих путей",
+  specialty: "Урология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "phq9",
+  title: "PHQ-9",
+  description:
+    "Скрининг выраженности депрессивной симптоматики",
+  specialty: "Психиатрия",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "bishop-score",
+  title: "Шкала Бишопа",
+  description:
+    "Готовность шейки матки к индукции родов",
+  specialty: "Акушерство и гинекология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "audit-c",
+  title: "AUDIT-C",
+  description:
+    "Скрининг рискованного употребления алкоголя",
+  specialty: "Терапия",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
 ];
