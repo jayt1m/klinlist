@@ -13,10 +13,48 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://klinlist.vercel.app";
+
+const title = "КлинЛист — медицинские калькуляторы для врачей";
+const description =
+  "Бесплатные клинические калькуляторы и медицинские шкалы (CHA₂DS₂-VASc, GRACE, SCORE2, СКФ и другие) для ежедневной практики врача — на основе действующих клинических рекомендаций.";
+
 export const metadata: Metadata = {
-  title: "КлинЛист — медицинские калькуляторы для врачей",
-  description:
-    "Клинические калькуляторы и медицинские шкалы для ежедневной практики врача.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s — КлинЛист",
+  },
+  description,
+  keywords: [
+    "медицинский калькулятор",
+    "клинические калькуляторы",
+    "шкала CHA2DS2-VASc",
+    "шкала GRACE",
+    "SCORE2",
+    "клинические рекомендации",
+    "калькулятор СКФ",
+    "калькулятор для врачей",
+  ],
+  authors: [{ name: "КлинЛист" }],
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    siteName: "КлинЛист",
+    title,
+    description,
+    url: siteUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="ru"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">

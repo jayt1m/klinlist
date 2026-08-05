@@ -1,6 +1,13 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 
 import CalculatorsListClient from "@/components/calculators-list/CalculatorsListClient";
+import { calculators } from "@/data/calculators";
+
+export const metadata: Metadata = {
+  title: "Все калькуляторы",
+  description: `Полный список медицинских калькуляторов и шкал КлинЛист (${calculators.length} шт.) — поиск и фильтр по специальностям.`,
+};
 
 export default function CalculatorsPage() {
   return (

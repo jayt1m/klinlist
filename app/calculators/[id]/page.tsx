@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import type { Metadata } from "next";
 import CHA2DS2VASC from "@/components/calculators/cha2ds2vasc";
 import HASBLED from "@/components/calculators/hasbled";
 import CKDEPI from "@/components/calculators/ckd-epi";
@@ -47,6 +48,34 @@ type Props = {
     id: string;
   }>;
 };
+
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  const { id } = await params;
+
+  const calculator = getCalculator(id);
+
+  if (!calculator) {
+    return {};
+  }
+
+  const title = `${calculator.title} — калькулятор онлайн`;
+  const description = `${calculator.description}. Бесплатный онлайн-калькулятор для врачей на сайте КлинЛист.`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+    },
+    twitter: {
+      title,
+      description,
+    },
+  };
+}
 
 // Реестр калькуляторов: чтобы добавить новый калькулятор,
 // достаточно импортировать его компонент и добавить одну строку сюда.
