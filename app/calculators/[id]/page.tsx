@@ -40,6 +40,9 @@ import IpssCalc from "@/components/calculators/ipss";
 import Phq9Calc from "@/components/calculators/phq9";
 import BishopScoreCalc from "@/components/calculators/bishop-score";
 import AuditCCalc from "@/components/calculators/audit-c";
+import CrusadeCalc from "@/components/calculators/crusade";
+import PreciseDaptCalc from "@/components/calculators/precise-dapt";
+import VbgCalc from "@/components/calculators/vbg";
 import { notFound } from "next/navigation";
 import { getCalculator } from "@/lib/getCalculator";
 
@@ -120,6 +123,9 @@ const calculatorComponents: Record<string, ComponentType> = {
   "phq9": Phq9Calc,
   "bishop-score": BishopScoreCalc,
   "audit-c": AuditCCalc,
+  "crusade": CrusadeCalc,
+  "precise-dapt": PreciseDaptCalc,
+  "vbg": VbgCalc,
 };
 
 export default async function CalculatorPage({ params }: Props) {

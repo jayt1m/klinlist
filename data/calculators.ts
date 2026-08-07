@@ -412,4 +412,34 @@ export const calculators: Calculator[] = [
   icon: "Activity",
   color: "blue",
 },
+ {
+  id: "crusade",
+  title: "CRUSADE",
+  description:
+    "Риск крупного кровотечения в стационаре при ОКС без подъёма ST",
+  specialty: "Кардиология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "precise-dapt",
+  title: "PRECISE-DAPT",
+  description:
+    "Оптимальная длительность двойной антиагрегантной терапии после стентирования",
+  specialty: "Кардиология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "vbg",
+  title: "КЩС венозной крови",
+  description:
+    "Анализ кислотно-щелочного состояния и расчёт дозы гидрокарбоната натрия",
+  specialty: "Реаниматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
 ];
