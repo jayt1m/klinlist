@@ -12,7 +12,7 @@ type RadioCardProps = {
   value: string;
   onChange: (value: string) => void;
   options: Option[];
-  columns?: 2 | 3 | 4;
+  columns?: 1 | 2 | 3 | 4;
 };
 
 export default function RadioCard({
@@ -23,6 +23,7 @@ export default function RadioCard({
   columns = 2,
 }: RadioCardProps) {
   const gridCols = {
+    1: "grid-cols-1",
     2: "grid-cols-2",
     3: "grid-cols-3",
     4: "grid-cols-4",

@@ -60,6 +60,10 @@ export default function Header() {
               Калькуляторы
             </Link>
 
+            <Link href="/calculators/perfusor" className="transition hover:text-blue-600">
+              Перфузор
+            </Link>
+
             <Link
               href="/favorites"
               className="flex items-center gap-1.5 transition hover:text-blue-600"
@@ -98,6 +102,14 @@ export default function Header() {
             className="block py-3 text-base font-medium text-gray-700"
           >
             Калькуляторы
+          </Link>
+
+          <Link
+            href="/calculators/perfusor"
+            onClick={() => setMobileOpen(false)}
+            className="block py-3 text-base font-medium text-gray-700"
+          >
+            Перфузор
           </Link>
 
           <Link

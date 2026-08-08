@@ -277,7 +277,7 @@ export const calculators: Calculator[] = [
   title: "qSOFA",
   description:
     "Экспресс-оценка риска при подозрении на сепсис",
-  specialty: "Реаниматология",
+  specialty: "Анестезиология и реаниматология",
   category: "Риск",
   icon: "Activity",
   color: "blue",
@@ -367,7 +367,7 @@ export const calculators: Calculator[] = [
   title: "ASA",
   description:
     "Класс физического статуса пациента перед операцией",
-  specialty: "Анестезиология",
+  specialty: "Анестезиология и реаниматология",
   category: "Диагностика",
   icon: "Activity",
   color: "blue",
@@ -437,8 +437,18 @@ export const calculators: Calculator[] = [
   title: "КЩС венозной крови",
   description:
     "Анализ кислотно-щелочного состояния и расчёт дозы гидрокарбоната натрия",
-  specialty: "Реаниматология",
+  specialty: "Анестезиология и реаниматология",
   category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "perfusor",
+  title: "Перфузор",
+  description:
+    "Перевод дозы (мкг/кг/мин) в скорость инфузии (мл/ч) и обратно — норадреналин, дофамин, добутамин, адреналин и другие препараты на шприцевом насосе",
+  specialty: "Анестезиология и реаниматология",
+  category: "Дозирование",
   icon: "Activity",
   color: "blue",
 },

@@ -43,6 +43,7 @@ import AuditCCalc from "@/components/calculators/audit-c";
 import CrusadeCalc from "@/components/calculators/crusade";
 import PreciseDaptCalc from "@/components/calculators/precise-dapt";
 import VbgCalc from "@/components/calculators/vbg";
+import PerfusorCalc from "@/components/calculators/perfusor";
 import { notFound } from "next/navigation";
 import { getCalculator } from "@/lib/getCalculator";
 
@@ -126,6 +127,7 @@ const calculatorComponents: Record<string, ComponentType> = {
   "crusade": CrusadeCalc,
   "precise-dapt": PreciseDaptCalc,
   "vbg": VbgCalc,
+  "perfusor": PerfusorCalc,
 };
 
 export default async function CalculatorPage({ params }: Props) {
