@@ -59,7 +59,7 @@ export default function GRACECalculator() {
   const [creatinineUnit, setCreatinineUnit] =
     useState<CreatinineUnit>("umol");
 
-  const [killip, setKillip] = useState<KillipClass>("I");
+  const [killip, setKillip] = useState<KillipClass | "">("");
 
   const [cardiacArrest, setCardiacArrest] = useState(false);
   const [stDeviation, setStDeviation] = useState(false);
@@ -67,6 +67,7 @@ export default function GRACECalculator() {
 
 
   const isValid =
+    killip !== "" &&
     age !== "" &&
     heartRate !== "" &&
     sbp !== "" &&
@@ -85,7 +86,7 @@ export default function GRACECalculator() {
       sbp: Number(sbp),
       creatinine: Number(creatinine),
       creatinineUnit,
-      killip,
+      killip: killip as KillipClass,
       cardiacArrest,
       stDeviation,
       elevatedMarkers,

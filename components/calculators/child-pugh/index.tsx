@@ -12,10 +12,12 @@ export default function ChildPughCalculator() {
   const [bilirubin, setBilirubin] = useState(""); // µmol/L
   const [albumin, setAlbumin] = useState(""); // g/L
   const [inr, setInr] = useState("");
-  const [ascites, setAscites] = useState("1");
-  const [encephalopathy, setEncephalopathy] = useState("1");
+  const [ascites, setAscites] = useState("");
+  const [encephalopathy, setEncephalopathy] = useState("");
 
-  const isValid = bilirubin !== "" && albumin !== "" && inr !== "";
+  const isValid =
+    bilirubin !== "" && albumin !== "" && inr !== "" &&
+    ascites !== "" && encephalopathy !== "";
 
   function bilirubinPoints(v: number) {
     if (v < 34) return 1;

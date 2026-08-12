@@ -18,13 +18,14 @@ function clamp(value: number, min: number, max: number): number {
 export default function PreciseDaptCalculator() {
   const [age, setAge] = useState("");
   const [weight, setWeight] = useState("");
-  const [sex, setSex] = useState<"male" | "female">("male");
+  const [sex, setSex] = useState<"male" | "female" | "">("");
   const [creatinine, setCreatinine] = useState("");
   const [hemoglobin, setHemoglobin] = useState(""); // г/л
   const [wbc, setWbc] = useState(""); // ×10^9/л
   const [priorBleeding, setPriorBleeding] = useState(false);
 
   const isValid =
+    sex !== "" &&
     age !== "" && weight !== "" && creatinine !== "" &&
     hemoglobin !== "" && wbc !== "";
 
@@ -32,7 +33,7 @@ export default function PreciseDaptCalculator() {
     if (!isValid) return null;
 
     const crCl = calculateCockcroftGault({
-      sex,
+      sex: sex as "male" | "female",
       age: Number(age),
       weight: Number(weight),
       creatinine: Number(creatinine),

@@ -50,7 +50,7 @@ function crClPoints(crcl: number): number {
 export default function CrusadeCalculator() {
   const [age, setAge] = useState("");
   const [weight, setWeight] = useState("");
-  const [sex, setSex] = useState<"male" | "female">("male");
+  const [sex, setSex] = useState<"male" | "female" | "">("");
   const [creatinine, setCreatinine] = useState("");
 
   const [heartRate, setHeartRate] = useState("");
@@ -62,6 +62,7 @@ export default function CrusadeCalculator() {
   const [diabetes, setDiabetes] = useState(false);
 
   const isValid =
+    sex !== "" &&
     age !== "" && weight !== "" && creatinine !== "" &&
     heartRate !== "" && sbp !== "" && hematocrit !== "";
 
@@ -69,7 +70,7 @@ export default function CrusadeCalculator() {
     if (!isValid) return null;
 
     const crCl = calculateCockcroftGault({
-      sex,
+      sex: sex as "male" | "female",
       age: Number(age),
       weight: Number(weight),
       creatinine: Number(creatinine),

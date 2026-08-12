@@ -16,12 +16,12 @@ export default function QTcCalculator() {
 
   const [qt, setQt] = useState("");
   const [heartRate, setHeartRate] = useState("");
-  const [sex, setSex] = useState<Sex>("male");
+  const [sex, setSex] = useState<Sex | "">("");
 
 
   const result = useMemo(() => {
 
-    if (!qt || !heartRate) {
+    if (!qt || !heartRate || !sex) {
       return null;
     }
 
@@ -119,7 +119,7 @@ export default function QTcCalculator() {
             <Result
               qtcBazett={result.bazett}
               qtcFridericia={result.fridericia}
-              sex={sex}
+              sex={sex as Sex}
             />
 
           ) : (

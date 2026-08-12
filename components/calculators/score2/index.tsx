@@ -50,9 +50,9 @@ const regionOptions: {
 
 export default function SCORE2Calculator() {
 
-  const [sex, setSex] = useState<Sex>("male");
+  const [sex, setSex] = useState<Sex | "">("");
   const [age, setAge] = useState("");
-  const [smoking, setSmoking] = useState<"yes" | "no">("no");
+  const [smoking, setSmoking] = useState<"yes" | "no" | "">("");
   const [sbp, setSbp] = useState("");
 
   const [totalChol, setTotalChol] = useState("");
@@ -63,12 +63,15 @@ export default function SCORE2Calculator() {
   const [hdlUnit, setHdlUnit] =
     useState<CholesterolUnit>("mmol");
 
-  const [region, setRegion] = useState<RiskRegion>("veryhigh");
+  const [region, setRegion] = useState<RiskRegion | "">("");
 
 
   const ageNumber = Number(age);
 
   const isValid =
+    sex !== "" &&
+    smoking !== "" &&
+    region !== "" &&
     age !== "" &&
     sbp !== "" &&
     totalChol !== "" &&
@@ -84,7 +87,7 @@ export default function SCORE2Calculator() {
     }
 
     return getRecommendation({
-      sex,
+      sex: sex as Sex,
       age: ageNumber,
       smoking: smoking === "yes",
       sbp: Number(sbp),
@@ -92,7 +95,7 @@ export default function SCORE2Calculator() {
       totalCholUnit,
       hdl: Number(hdl),
       hdlUnit,
-      region,
+      region: region as RiskRegion,
     });
 
   }, [

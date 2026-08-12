@@ -12,7 +12,7 @@ import ResultCard from "@/components/ui/ResultCard";
 export default function GlasgowBlatchfordCalculator() {
   const [urea, setUrea] = useState("");
   const [hemoglobin, setHemoglobin] = useState("");
-  const [sex, setSex] = useState("male");
+  const [sex, setSex] = useState<"male" | "female" | "">("");
   const [sbp, setSbp] = useState("");
 
   const [pulse, setPulse] = useState(false);
@@ -21,7 +21,7 @@ export default function GlasgowBlatchfordCalculator() {
   const [hepatic, setHepatic] = useState(false);
   const [cardiac, setCardiac] = useState(false);
 
-  const isValid = urea !== "" && hemoglobin !== "" && sbp !== "";
+  const isValid = sex !== "" && urea !== "" && hemoglobin !== "" && sbp !== "";
 
   function ureaPoints(v: number) {
     if (v < 6.5) return 0;

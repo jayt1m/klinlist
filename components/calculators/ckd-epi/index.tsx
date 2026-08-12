@@ -22,7 +22,7 @@ import InputWithUnit from "@/components/ui/InputWithUnit";
 import InputWithSelect from "@/components/ui/InputWithSelect";
 
 export default function CKDEPICalculator() {
-  const [sex, setSex] = useState<Sex>("male");
+  const [sex, setSex] = useState<Sex | "">("");
   const [age, setAge] = useState("");
   const [weight, setWeight] = useState("");
   const [creatinine, setCreatinine] = useState("");
@@ -30,7 +30,7 @@ export default function CKDEPICalculator() {
     useState<CreatinineUnit>("umol");
 
   const data = useMemo<EGFRData | null>(() => {
-    if (!age || !weight || !creatinine) {
+    if (!sex || !age || !weight || !creatinine) {
       return null;
     }
 
