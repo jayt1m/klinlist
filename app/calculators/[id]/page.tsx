@@ -44,6 +44,36 @@ import CrusadeCalc from "@/components/calculators/crusade";
 import PreciseDaptCalc from "@/components/calculators/precise-dapt";
 import VbgCalc from "@/components/calculators/vbg";
 import PerfusorCalc from "@/components/calculators/perfusor";
+import Score2OpCalc from "@/components/calculators/score2-op";
+import NyhaCalc from "@/components/calculators/nyha";
+import DukeTreadmillCalc from "@/components/calculators/duke-treadmill";
+import RankinCalc from "@/components/calculators/rankin";
+import IchScoreCalc from "@/components/calculators/ich-score";
+import CanadianCtHeadCalc from "@/components/calculators/canadian-ct-head";
+import BodeCalc from "@/components/calculators/bode";
+import CatCopdCalc from "@/components/calculators/cat-copd";
+import MmrcCalc from "@/components/calculators/mmrc";
+import StopBangCalc from "@/components/calculators/stop-bang";
+import RansonCalc from "@/components/calculators/ranson";
+import RockallCalc from "@/components/calculators/rockall";
+import ApriCalc from "@/components/calculators/apri";
+import AlvaradoCalc from "@/components/calculators/alvarado";
+import FreeWaterDeficitCalc from "@/components/calculators/free-water-deficit";
+import CorrectedCalciumCalc from "@/components/calculators/corrected-calcium";
+import CorrectedSodiumCalc from "@/components/calculators/corrected-sodium";
+import IdealBodyWeightCalc from "@/components/calculators/ideal-body-weight";
+import BmrCalc from "@/components/calculators/bmr";
+import News2Calc from "@/components/calculators/news2";
+import CharlsonCalc from "@/components/calculators/charlson";
+import AnionGapCalc from "@/components/calculators/anion-gap";
+import SofaCalc from "@/components/calculators/sofa";
+import MallampatiCalc from "@/components/calculators/mallampati";
+import N4tsCalc from "@/components/calculators/fourts";
+import EcogCalc from "@/components/calculators/ecog";
+import NexusCalc from "@/components/calculators/nexus";
+import RevisedTraumaCalc from "@/components/calculators/revised-trauma";
+import NaegeleCalc from "@/components/calculators/naegele";
+import WaistHipRatioCalc from "@/components/calculators/waist-hip-ratio";
 import { notFound } from "next/navigation";
 import { getCalculator } from "@/lib/getCalculator";
 
@@ -128,6 +158,36 @@ const calculatorComponents: Record<string, ComponentType> = {
   "precise-dapt": PreciseDaptCalc,
   "vbg": VbgCalc,
   "perfusor": PerfusorCalc,
+  "score2-op": Score2OpCalc,
+  "nyha": NyhaCalc,
+  "duke-treadmill": DukeTreadmillCalc,
+  "rankin": RankinCalc,
+  "ich-score": IchScoreCalc,
+  "canadian-ct-head": CanadianCtHeadCalc,
+  "bode": BodeCalc,
+  "cat-copd": CatCopdCalc,
+  "mmrc": MmrcCalc,
+  "stop-bang": StopBangCalc,
+  "ranson": RansonCalc,
+  "rockall": RockallCalc,
+  "apri": ApriCalc,
+  "alvarado": AlvaradoCalc,
+  "free-water-deficit": FreeWaterDeficitCalc,
+  "corrected-calcium": CorrectedCalciumCalc,
+  "corrected-sodium": CorrectedSodiumCalc,
+  "ideal-body-weight": IdealBodyWeightCalc,
+  "bmr": BmrCalc,
+  "news2": News2Calc,
+  "charlson": CharlsonCalc,
+  "anion-gap": AnionGapCalc,
+  "sofa": SofaCalc,
+  "mallampati": MallampatiCalc,
+  "4ts": N4tsCalc,
+  "ecog": EcogCalc,
+  "nexus": NexusCalc,
+  "revised-trauma": RevisedTraumaCalc,
+  "naegele": NaegeleCalc,
+  "waist-hip-ratio": WaistHipRatioCalc,
 };
 
 export default async function CalculatorPage({ params }: Props) {

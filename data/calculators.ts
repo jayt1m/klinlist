@@ -452,4 +452,304 @@ export const calculators: Calculator[] = [
   icon: "Activity",
   color: "blue",
 },
+ {
+  id: "score2-op",
+  title: "SCORE2-OP",
+  description:
+    "10-летний риск сердечно-сосудистых событий у пациентов 70-89 лет",
+  specialty: "Кардиология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "nyha",
+  title: "NYHA",
+  description:
+    "Функциональный класс хронической сердечной недостаточности",
+  specialty: "Кардиология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "duke-treadmill",
+  title: "Duke Treadmill Score",
+  description:
+    "Стратификация риска по результатам нагрузочного теста на тредмиле",
+  specialty: "Кардиология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "rankin",
+  title: "Модифицированная шкала Рэнкина",
+  description:
+    "Степень инвалидизации после инсульта",
+  specialty: "Неврология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "ich-score",
+  title: "ICH Score",
+  description:
+    "Прогноз 30-дневной летальности при внутримозговом кровоизлиянии",
+  specialty: "Неврология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "canadian-ct-head",
+  title: "Canadian CT Head Rule",
+  description:
+    "Показания к КТ головы при лёгкой черепно-мозговой травме",
+  specialty: "Неврология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "bode",
+  title: "BODE Index",
+  description:
+    "Прогноз выживаемости при ХОБЛ",
+  specialty: "Пульмонология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "cat-copd",
+  title: "CAT (COPD Assessment Test)",
+  description:
+    "Влияние ХОБЛ на повседневную жизнь пациента",
+  specialty: "Пульмонология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "mmrc",
+  title: "mMRC",
+  description:
+    "Модифицированная шкала одышки",
+  specialty: "Пульмонология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "stop-bang",
+  title: "STOP-BANG",
+  description:
+    "Скрининг риска синдрома обструктивного апноэ сна",
+  specialty: "Пульмонология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "ranson",
+  title: "Критерии Ranson",
+  description:
+    "Тяжесть острого панкреатита",
+  specialty: "Гастроэнтерология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "rockall",
+  title: "Шкала Rockall",
+  description:
+    "Риск при кровотечении из верхних отделов ЖКТ",
+  specialty: "Гастроэнтерология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "apri",
+  title: "APRI",
+  description:
+    "Неинвазивная оценка фиброза печени",
+  specialty: "Гастроэнтерология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "alvarado",
+  title: "Шкала Alvarado",
+  description:
+    "Клиническая вероятность острого аппендицита",
+  specialty: "Хирургия",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "free-water-deficit",
+  title: "Дефицит свободной воды",
+  description:
+    "Расчёт дефицита воды при гипернатриемии",
+  specialty: "Эндокринология",
+  category: "Дозирование",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "corrected-calcium",
+  title: "Скорректированный кальций",
+  description:
+    "Поправка общего кальция на уровень альбумина",
+  specialty: "Эндокринология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "corrected-sodium",
+  title: "Скорректированный натрий",
+  description:
+    "Поправка натрия на гипергликемию",
+  specialty: "Эндокринология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "ideal-body-weight",
+  title: "Идеальная масса тела",
+  description:
+    "Формула Девайна для расчёта доз препаратов",
+  specialty: "Терапия",
+  category: "Дозирование",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "bmr",
+  title: "Базальный метаболизм (BMR)",
+  description:
+    "Формула Миффлина-Сан Жеора",
+  specialty: "Терапия",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "news2",
+  title: "NEWS2",
+  description:
+    "Раннее выявление клинического ухудшения у взрослых",
+  specialty: "Терапия",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "charlson",
+  title: "Индекс Charlson",
+  description:
+    "Оценка коморбидности и прогноза выживаемости",
+  specialty: "Терапия",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "anion-gap",
+  title: "Анионный интервал",
+  description:
+    "Диагностика метаболического ацидоза",
+  specialty: "Анестезиология и реаниматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "sofa",
+  title: "SOFA",
+  description:
+    "Оценка полиорганной дисфункции в ОРИТ",
+  specialty: "Анестезиология и реаниматология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "mallampati",
+  title: "Шкала Маллампати",
+  description:
+    "Предоперационная оценка трудности интубации",
+  specialty: "Анестезиология и реаниматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "4ts",
+  title: "Шкала 4Ts",
+  description:
+    "Претестовая вероятность гепарин-индуцированной тромбоцитопении",
+  specialty: "Анестезиология и реаниматология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "ecog",
+  title: "ECOG",
+  description:
+    "Функциональный статус онкологического пациента",
+  specialty: "Терапия",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "nexus",
+  title: "Критерии NEXUS",
+  description:
+    "Показания к визуализации шейного отдела позвоночника при травме",
+  specialty: "Травматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "revised-trauma",
+  title: "Revised Trauma Score",
+  description:
+    "Оценка тяжести травмы для сортировки и прогноза",
+  specialty: "Травматология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "naegele",
+  title: "Правило Негеле",
+  description:
+    "Расчёт предполагаемой даты родов",
+  specialty: "Акушерство и гинекология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "waist-hip-ratio",
+  title: "Отношение талия/бёдра",
+  description:
+    "Оценка абдоминального ожирения по критериям ВОЗ",
+  specialty: "Терапия",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
 ];
