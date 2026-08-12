@@ -83,7 +83,7 @@ export default function GlasgowBlatchfordCalculator() {
             <RadioCard
               label="Пол"
               value={sex}
-              onChange={setSex}
+              onChange={(v) => setSex(v as "male" | "female")}
               columns={2}
               options={[
                 { value: "male", label: "Мужчина" },
