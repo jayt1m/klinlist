@@ -75,10 +75,16 @@ export default function KillipCalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+<p>
         Классификация тяжести острой сердечной недостаточности при
         инфаркте миокарда, оцениваемая при поступлении. Является одним
-        из компонентов шкалы GRACE. Источник: Killip T, Kimball JT. Am
+        из компонентов шкалы GRACE.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Killip T, Kimball JT. Am
         J Cardiol. 1967;20(4):457-464.
+        </p>
       </div>
 
     </div>

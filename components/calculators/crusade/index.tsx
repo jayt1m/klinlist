@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import CheckboxCard from "@/components/ui/CheckboxCard";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import RadioCard from "@/components/ui/RadioCard";
@@ -124,6 +125,8 @@ export default function CrusadeCalculator() {
     veryhigh: "19.5",
   };
 
+
+  const resultRef = useScrollToResult(result !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -165,7 +168,7 @@ export default function CrusadeCalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {result !== null && category !== null ? (
 
@@ -206,11 +209,17 @@ export default function CrusadeCalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+<p>
         Оценка риска крупного кровотечения в стационаре у пациентов с
         ОКС без подъёма ST перед началом антитромботической терапии.
         Используется наряду с ишемическими шкалами (GRACE, TIMI) для
-        поиска баланса между пользой и риском. Источник: Subherwal S,
+        поиска баланса между пользой и риском.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Subherwal S,
         et al. Circulation. 2009;119(14):1873-1882.
+        </p>
       </div>
 
     </div>

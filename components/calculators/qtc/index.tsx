@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import ExpandableCard from "@/components/ui/ExpandableCard";
 
@@ -38,6 +39,8 @@ export default function QTcCalculator() {
   }, [qt, heartRate, sex]);
 
 
+
+  const resultRef = useScrollToResult(result !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -109,7 +112,7 @@ export default function QTcCalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {result ? (
 
@@ -165,6 +168,12 @@ export default function QTcCalculator() {
             пограничные значения до 450/470 мс, удлинение выше
             этих значений. QTc ≥500 мс — существенный фактор
             риска torsades de pointes.
+          </p>
+
+          <p className="mt-3 text-xs text-gray-500">
+            Источники: Bazett HC. Heart. 1920;7:353-370. Fridericia
+            LS. Acta Med Scand. 1920;53:469-486. Пороги — Rautaharju
+            PM, et al. Circulation. 2009;119(10):e241-e250.
           </p>
 
         </div>

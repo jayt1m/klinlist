@@ -106,11 +106,16 @@ export default function AsaPsCalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+<p>
         Используется анестезиологами для предоперационной оценки общего
         физического состояния пациента и коррелирует с периоперационным
         риском. Суффикс «E» указывает на экстренный характер операции.
-        Источник: American Society of Anesthesiologists (ASA Physical
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: American Society of Anesthesiologists (ASA Physical
         Status Classification System).
+        </p>
       </div>
 
     </div>

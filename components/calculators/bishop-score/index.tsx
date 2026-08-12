@@ -110,12 +110,18 @@ export default function BishopScoreCalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+<p>
         Оценка готовности шейки матки к индукции родов. Балл ≥8
         ассоциирован с высокой вероятностью успешной индукции и
         вагинальных родов, ≤6 — с низкой (обычно требует применения
         средств для созревания шейки матки перед индукцией). Метод
-        субъективен и зависит от исследователя. Источник: Bishop EH.
+        субъективен и зависит от исследователя.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Bishop EH.
         Obstet Gynecol. 1964;24:266-268.
+        </p>
       </div>
 
     </div>

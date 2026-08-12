@@ -85,10 +85,16 @@ export default function GenevaScoreCalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+<p>
         Альтернатива шкале Wells для оценки вероятности ТЭЛА, не
         требующая клинического «гештальта» врача — построена только на
-        объективных критериях. Источник: Le Gal G, et al. Ann Intern
+        объективных критериях.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Le Gal G, et al. Ann Intern
         Med. 2006;144(3):165-171.
+        </p>
       </div>
 
     </div>

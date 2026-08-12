@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 
 import { calculateBMI } from "./formulas";
@@ -29,6 +30,8 @@ export default function BMICalculator() {
   }, [weight, height]);
 
 
+
+  const resultRef = useScrollToResult(bmi !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -62,7 +65,7 @@ export default function BMICalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {bmi !== null ? (
 
@@ -97,12 +100,19 @@ export default function BMICalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
-        ИМТ не различает мышечную и жировую массу и может вводить в
-        заблуждение у спортсменов с развитой мускулатурой (завышает
-        категорию) и у пожилых пациентов с саркопенией (занижает
-        категорию при сохранном или избыточном жировом компоненте).
-        Не применяется у беременных и у детей — для детей
-        используются возрастные перцентильные таблицы ВОЗ.
+        <p>
+          ИМТ не различает мышечную и жировую массу и может вводить в
+          заблуждение у спортсменов с развитой мускулатурой (завышает
+          категорию) и у пожилых пациентов с саркопенией (занижает
+          категорию при сохранном или избыточном жировом компоненте).
+          Не применяется у беременных и у детей — для детей
+          используются возрастные перцентильные таблицы ВОЗ.
+        </p>
+        <p className="mt-3 text-xs text-gray-500">
+          Источник классификации: World Health Organization. Obesity:
+          preventing and managing the global epidemic. WHO Technical
+          Report Series 894, 2000.
+        </p>
       </div>
 
     </div>

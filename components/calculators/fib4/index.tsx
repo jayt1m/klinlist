@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import ResultCard from "@/components/ui/ResultCard";
 
@@ -33,6 +34,8 @@ export default function FIB4Calculator() {
         ? "Неопределённый результат — нужна доп. диагностика"
         : "Высокая вероятность выраженного фиброза";
 
+
+  const resultRef = useScrollToResult(result !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -55,7 +58,7 @@ export default function FIB4Calculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {result !== null ? (
 

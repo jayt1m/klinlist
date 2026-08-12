@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import RadioCard from "@/components/ui/RadioCard";
 
@@ -39,6 +40,8 @@ export default function LDLCalculator() {
   }, [totalChol, hdl, triglycerides, unit]);
 
 
+
+  const resultRef = useScrollToResult(ldl !== undefined);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -92,7 +95,7 @@ export default function LDLCalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {ldl !== undefined ? (
 

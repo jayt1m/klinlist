@@ -86,9 +86,15 @@ export default function PERCCalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+<p>
         PERC применяется только у пациентов с изначально низкой
-        клинической вероятностью ТЭЛА. Источник: Kline JA, et al. J
+        клинической вероятностью ТЭЛА.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Kline JA, et al. J
         Thromb Haemost. 2004;2(8):1247-1255.
+        </p>
       </div>
 
     </div>

@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { CircleAlert } from "lucide-react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import ExpandableCard from "@/components/ui/ExpandableCard";
 
@@ -100,6 +101,8 @@ export default function VbgCalculator() {
     };
   }, [weight, isMetabolicAcidosis, hco3, targetHco3, baseExcess]);
 
+
+  const resultRef = useScrollToResult(disorder !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -144,7 +147,7 @@ export default function VbgCalculator() {
 
         </div>
 
-        <div className="space-y-6">
+        <div ref={resultRef} className="space-y-6">
 
           {disorder !== null ? (
 
@@ -274,7 +277,7 @@ export default function VbgCalculator() {
             интервал и клиническую картину.
           </p>
 
-          <p className="text-sm text-gray-500">
+          <p className="mt-3 text-xs text-gray-500">
             Источники: формула Винтера — Winters RW, et al. Ann N Y
             Acad Sci. 1965;133:246-265. Формулы дозирования
             гидрокарбоната — стандартные клинические протоколы

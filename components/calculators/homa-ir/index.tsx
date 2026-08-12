@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import ResultCard from "@/components/ui/ResultCard";
 
@@ -20,6 +21,8 @@ export default function HomaIrCalculator() {
 
   const resistant = result !== null && result >= 2.7;
 
+
+  const resultRef = useScrollToResult(result !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -51,7 +54,7 @@ export default function HomaIrCalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {result !== null ? (
 

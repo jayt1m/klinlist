@@ -21,21 +21,25 @@ export default function ResultCard({
 }: ResultCardProps) {
   const colors = {
     green: {
+      bg: "bg-emerald-600",
       header: "from-emerald-600 to-emerald-500",
       badge: "bg-emerald-100 text-emerald-700",
       border: "border-emerald-200",
     },
     yellow: {
+      bg: "bg-amber-500",
       header: "from-amber-500 to-yellow-500",
       badge: "bg-yellow-100 text-yellow-700",
       border: "border-yellow-200",
     },
     red: {
+      bg: "bg-red-600",
       header: "from-red-600 to-red-500",
       badge: "bg-red-100 text-red-700",
       border: "border-red-200",
     },
     blue: {
+      bg: "bg-sky-600",
       header: "from-sky-600 to-cyan-500",
       badge: "bg-sky-100 text-sky-700",
       border: "border-sky-200",
@@ -49,13 +53,13 @@ export default function ResultCard({
       className={`overflow-hidden rounded-3xl border bg-white shadow-sm ${style.border}`}
     >
       <div
-        className={`bg-gradient-to-r ${style.header} px-8 py-7 text-white`}
+        className={`${style.bg} bg-gradient-to-r ${style.header} px-8 py-7 text-white`}
       >
         <p className="text-sm font-medium opacity-90">
           {title}
         </p>
 
-        <div className="mt-4 flex items-end gap-3">
+        <div className="mt-4 flex flex-wrap items-end gap-x-3 gap-y-1">
           <span className="text-6xl font-bold leading-none">
             {score}
           </span>

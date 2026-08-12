@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import ResultCard from "@/components/ui/ResultCard";
 
@@ -30,6 +31,8 @@ export default function FeNaCalculator() {
         ? "1–2% — неопределённо"
         : ">2% — типично для интраренальной ОПП (ОКН)";
 
+
+  const resultRef = useScrollToResult(result !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -59,7 +62,7 @@ export default function FeNaCalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {result !== null ? (
 
@@ -89,12 +92,17 @@ export default function FeNaCalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
-        FeNa(%) = (натрий мочи × креатинин плазмы) / (натрий плазмы ×
-        креатинин мочи) × 100. Помогает различить преренальную
-        (гиповолемическую) и интраренальную (острый канальцевый
-        некроз) причины острого повреждения почек. Неинформативен на
-        фоне приёма диуретиков — в этом случае используйте фракционную
-        экскрецию мочевины (FeUrea).
+        <p>
+          FeNa(%) = (натрий мочи × креатинин плазмы) / (натрий плазмы ×
+          креатинин мочи) × 100. Помогает различить преренальную
+          (гиповолемическую) и интраренальную (острый канальцевый
+          некроз) причины острого повреждения почек. Неинформативен на
+          фоне приёма диуретиков — в этом случае используйте фракционную
+          экскрецию мочевины (FeUrea).
+        </p>
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Espinel CH. JAMA. 1976;236(6):579-581.
+        </p>
       </div>
 
     </div>

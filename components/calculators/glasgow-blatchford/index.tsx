@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import CheckboxCard from "@/components/ui/CheckboxCard";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import RadioCard from "@/components/ui/RadioCard";
@@ -62,6 +63,8 @@ export default function GlasgowBlatchfordCalculator() {
 
   const lowRisk = score === 0;
 
+
+  const resultRef = useScrollToResult(score !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -103,7 +106,7 @@ export default function GlasgowBlatchfordCalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {score !== null ? (
 

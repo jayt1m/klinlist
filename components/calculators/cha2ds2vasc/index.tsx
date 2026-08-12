@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { getCalculatorInfo } from "@/lib/getCalculatorInfo";
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
 
 import Info from "./Info";
@@ -61,8 +60,6 @@ export default function CHA2DS2VASC() {
 
   const recommendation =
     getRecommendation(data);
-const calculatorInfo =
-    getCalculatorInfo("cha2ds2-vasc");
 
 
   return (
@@ -78,86 +75,81 @@ const calculatorInfo =
 
       <Info />
 
+      <div className="grid gap-8 lg:grid-cols-[1fr_380px]">
 
+        <div>
 
-      <div className="
-        rounded-3xl
-        border
-        border-gray-200
-        bg-white
-        p-8
-        shadow-sm
-      ">
-
-
-        <PatientSection
-
-          data={data}
-
-          setData={setData}
-
-        />
-
-
-
-        <hr className="my-10" />
-
-
-
-        <RiskFactorsSection
-
-          data={data}
-
-          toggle={toggle}
-
-        />
-
-
-      </div>
-
-
-
-
-      <div className="flex justify-end">
-
-
-        <button
-
-          onClick={resetCalculator}
-
-          className="
-            rounded-xl
+          <div className="
+            rounded-3xl
             border
-            border-gray-300
-            px-6
-            py-3
-            font-medium
-            transition
-            hover:bg-gray-100
-          "
+            border-gray-200
+            bg-white
+            p-8
+            shadow-sm
+          ">
 
-        >
 
-          Сбросить
+            <PatientSection
 
-        </button>
+              data={data}
 
+              setData={setData}
+
+            />
+
+
+
+            <hr className="my-10" />
+
+
+
+            <RiskFactorsSection
+
+              data={data}
+
+              toggle={toggle}
+
+            />
+
+
+          </div>
+
+          <div className="mt-6 flex justify-end">
+
+            <button
+
+              onClick={resetCalculator}
+
+              className="
+                rounded-xl
+                border
+                border-gray-300
+                px-6
+                py-3
+                font-medium
+                transition
+                hover:bg-gray-100
+              "
+
+            >
+
+              Сбросить
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <Result
+
+          recommendation={recommendation}
+
+          data={data}
+
+        />
 
       </div>
-
-
-
-
-
-      <Result
-
-        recommendation={recommendation}
-
-        data={data}
-
-      />
-
-
 
     </div>
 

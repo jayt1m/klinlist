@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import RadioCard from "@/components/ui/RadioCard";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import InputWithSelect from "@/components/ui/InputWithSelect";
@@ -108,6 +109,8 @@ export default function SCORE2Calculator() {
   ]);
 
 
+
+  const resultRef = useScrollToResult(recommendation !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -238,7 +241,7 @@ export default function SCORE2Calculator() {
 
         {/* Правая карточка */}
 
-        <div>
+        <div ref={resultRef}>
 
           {recommendation ? (
 
@@ -295,7 +298,7 @@ export default function SCORE2Calculator() {
             разных регионах.
           </p>
 
-          <p className="text-sm text-gray-500">
+          <p className="mt-3 text-xs text-gray-500">
             Источник: SCORE2 Working Group and ESC
             Cardiovascular Risk Collaboration. Eur Heart J.
             2021.

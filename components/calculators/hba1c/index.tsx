@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import ResultCard from "@/components/ui/ResultCard";
 
@@ -23,6 +24,8 @@ export default function HbA1cCalculator() {
     };
   }, [hba1c]);
 
+
+  const resultRef = useScrollToResult(result !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -43,7 +46,7 @@ export default function HbA1cCalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {result ? (
 

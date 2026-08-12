@@ -93,12 +93,18 @@ export default function AuditCCalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+<p>
         Краткий скрининговый инструмент (сокращённая версия AUDIT) для
         выявления рискованного и вредного употребления алкоголя.
         Порог положительного результата: ≥4 балла для мужчин, ≥3 балла
         для женщин. Положительный результат — повод для более
-        развёрнутой оценки, а не диагноз. Источник: Bush K, et al.
+        развёрнутой оценки, а не диагноз.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Bush K, et al.
         Arch Intern Med. 1998;158(16):1789-1795.
+        </p>
       </div>
 
     </div>

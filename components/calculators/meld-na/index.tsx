@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import ResultCard from "@/components/ui/ResultCard";
 
@@ -71,6 +72,8 @@ export default function MeldNaCalculator() {
           ? "≈19.6%"
           : "≈52.6% и выше";
 
+
+  const resultRef = useScrollToResult(result !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -105,7 +108,7 @@ export default function MeldNaCalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {result !== null ? (
 
@@ -135,13 +138,19 @@ export default function MeldNaCalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+<p>
         Действующая (с 2016 года) версия шкалы MELD, применяемая UNOS/OPTN
         для приоритизации в листе ожидания трансплантации печени.
         Значения лабораторных показателей ограничены нижними и верхними
-        порогами согласно официальной методике расчёта. Источники:
+        порогами согласно официальной методике расчёта.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источники:
         Kamath PS, et al. Hepatology. 2001;33(2):464-470. Wiesner R,
         et al. Gastroenterology. 2003;124(1):91-96. OPTN Policy,
         2016.
+        </p>
       </div>
 
     </div>

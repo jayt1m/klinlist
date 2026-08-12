@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { CircleAlert } from "lucide-react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import RadioCard from "@/components/ui/RadioCard";
 
@@ -124,6 +125,8 @@ export default function PerfusorCalculator() {
     return Number(volumeMl) / result.rateMlHr;
   }, [result, volumeMl]);
 
+
+  const resultRef = useScrollToResult(result !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -204,7 +207,7 @@ export default function PerfusorCalculator() {
 
         </div>
 
-        <div className="space-y-6">
+        <div ref={resultRef} className="space-y-6">
 
           {result !== null ? (
 
@@ -309,10 +312,16 @@ export default function PerfusorCalculator() {
         концентрация раствора (мкг/мл). Концентрация = масса
         препарата (мг) × 1000 / объём раствора (мл). Дофамин и
         допамин — разные транслитерации одного и того же МНН
-        (dopamine), это один препарат. Разведения по умолчанию для
-        норадреналина и добутамина взяты из действующих инструкций
-        РЛС; для адреналина и дофамина — распространённые в практике
-        варианты, могут отличаться в вашем отделении.
+        (dopamine), это один препарат.
+      </div>
+
+      <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+        Разведения и дозы по умолчанию для норадреналина и
+        добутамина взяты из действующих инструкций по медицинскому
+        применению (РЛС); для адреналина и дофамина — из
+        распространённых в практике вариантов и стандартных
+        руководств по интенсивной терапии. Всегда сверяйте с
+        протоколом вашего отделения.
       </div>
 
     </div>

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 
 import {
   calculateCKDEPI2009,
@@ -59,6 +60,8 @@ export default function CKDEPICalculator() {
     };
   }, [data]);
 
+
+  const resultRef = useScrollToResult(result !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -182,7 +185,7 @@ export default function CKDEPICalculator() {
 
         {/* Правая карточка */}
 
-        <div>
+        <div ref={resultRef}>
 
           {result ? (
             <Result
@@ -217,6 +220,15 @@ export default function CKDEPICalculator() {
 
         </div>
 
+      </div>
+
+      <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+        Основная формула — CKD-EPI 2009 года: Levey AS, et al. Ann
+        Intern Med. 2009;150(9):604-612. CKD-EPI 2021 года (без
+        расового коэффициента): Inker LA, et al. N Engl J Med.
+        2021;385(19):1737-1749. MDRD: Levey AS, et al. Ann Intern
+        Med. 1999;130(6):461-470. Cockcroft-Gault: Cockcroft DW,
+        Gault MH. Nephron. 1976;16(1):31-41.
       </div>
 
     </div>

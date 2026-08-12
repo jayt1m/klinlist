@@ -49,82 +49,86 @@ export default function WellsPECalculator() {
 
       <CalculatorHeader calculatorId="wells-pe" />
 
-      <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
+      <div className="grid gap-8 lg:grid-cols-[1fr_380px]">
 
-        <h2 className="mb-8 text-3xl font-bold">
-          Клинические критерии
-        </h2>
+        <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
 
-        <div className="space-y-4">
+          <div className="mb-6 flex items-center justify-between">
 
-          <CheckboxCard
-            title="Клинические признаки ТГВ"
-            description="Отёк, боль при пальпации по ходу глубоких вен"
-            points={3}
-            checked={data.dvtSigns}
-            onChange={() => toggle("dvtSigns")}
-          />
+            <h2 className="text-2xl font-bold">
+              Клинические критерии
+            </h2>
 
-          <CheckboxCard
-            title="ТЭЛА наиболее вероятна"
-            description="Или равновероятна другим диагнозам"
-            points={3}
-            checked={data.peMostLikely}
-            onChange={() => toggle("peMostLikely")}
-          />
+            <button
+              onClick={resetCalculator}
+              className="text-sm font-medium text-gray-500 transition hover:text-gray-800"
+            >
+              Сбросить
+            </button>
 
-          <CheckboxCard
-            title="ЧСС >100 уд/мин"
-            points={1.5}
-            checked={data.heartRateOver100}
-            onChange={() => toggle("heartRateOver100")}
-          />
+          </div>
 
-          <CheckboxCard
-            title="Иммобилизация ≥3 дней или операция за последние 4 недели"
-            points={1.5}
-            checked={data.immobilization}
-            onChange={() => toggle("immobilization")}
-          />
+          <div className="space-y-4">
 
-          <CheckboxCard
-            title="ТГВ или ТЭЛА в анамнезе"
-            points={1.5}
-            checked={data.previousDvtPe}
-            onChange={() => toggle("previousDvtPe")}
-          />
+            <CheckboxCard
+              title="Клинические признаки ТГВ"
+              description="Отёк, боль при пальпации по ходу глубоких вен"
+              points={3}
+              checked={data.dvtSigns}
+              onChange={() => toggle("dvtSigns")}
+            />
 
-          <CheckboxCard
-            title="Кровохарканье"
-            points={1}
-            checked={data.hemoptysis}
-            onChange={() => toggle("hemoptysis")}
-          />
+            <CheckboxCard
+              title="ТЭЛА наиболее вероятна"
+              description="Или равновероятна другим диагнозам"
+              points={3}
+              checked={data.peMostLikely}
+              onChange={() => toggle("peMostLikely")}
+            />
 
-          <CheckboxCard
-            title="Злокачественное новообразование"
-            description="Лечение в последние 6 месяцев или паллиативная помощь"
-            points={1}
-            checked={data.malignancy}
-            onChange={() => toggle("malignancy")}
-          />
+            <CheckboxCard
+              title="ЧСС >100 уд/мин"
+              points={1.5}
+              checked={data.heartRateOver100}
+              onChange={() => toggle("heartRateOver100")}
+            />
+
+            <CheckboxCard
+              title="Иммобилизация ≥3 дней или операция за последние 4 недели"
+              points={1.5}
+              checked={data.immobilization}
+              onChange={() => toggle("immobilization")}
+            />
+
+            <CheckboxCard
+              title="ТГВ или ТЭЛА в анамнезе"
+              points={1.5}
+              checked={data.previousDvtPe}
+              onChange={() => toggle("previousDvtPe")}
+            />
+
+            <CheckboxCard
+              title="Кровохарканье"
+              points={1}
+              checked={data.hemoptysis}
+              onChange={() => toggle("hemoptysis")}
+            />
+
+            <CheckboxCard
+              title="Злокачественное новообразование"
+              description="Лечение в последние 6 месяцев или паллиативная помощь"
+              points={1}
+              checked={data.malignancy}
+              onChange={() => toggle("malignancy")}
+            />
+
+          </div>
 
         </div>
 
-      </div>
-
-      <div className="flex justify-end">
-
-        <button
-          onClick={resetCalculator}
-          className="rounded-xl border border-gray-300 bg-white px-6 py-3 font-medium transition hover:bg-gray-100"
-        >
-          Сбросить расчёт
-        </button>
+        <Result recommendation={recommendation} />
 
       </div>
-
-      <Result recommendation={recommendation} />
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
         <p>

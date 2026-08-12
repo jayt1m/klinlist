@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import RadioCard from "@/components/ui/RadioCard";
 import CheckboxCard from "@/components/ui/CheckboxCard";
 import InputWithUnit from "@/components/ui/InputWithUnit";
@@ -104,6 +105,8 @@ export default function GRACECalculator() {
   ]);
 
 
+
+  const resultRef = useScrollToResult(recommendation !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -201,7 +204,7 @@ export default function GRACECalculator() {
 
         {/* Правая карточка */}
 
-        <div>
+        <div ref={resultRef}>
 
           {recommendation ? (
 
@@ -255,7 +258,7 @@ export default function GRACECalculator() {
             неотложная инвазивная стратегия.
           </p>
 
-          <p className="text-sm text-gray-500">
+          <p className="mt-3 text-xs text-gray-500">
             Источники: Fox KA, et al. BMJ. 2006;333(7578):1091.
             Granger CB, et al. Arch Intern Med.
             2003;163(19):2345-53.

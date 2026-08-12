@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import CheckboxCard from "@/components/ui/CheckboxCard";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import RadioCard from "@/components/ui/RadioCard";
@@ -55,6 +56,8 @@ export default function PreciseDaptCalculator() {
 
   const highRisk = result !== null && result.score >= 25;
 
+
+  const resultRef = useScrollToResult(result !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -96,7 +99,7 @@ export default function PreciseDaptCalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {result !== null ? (
 
@@ -135,6 +138,7 @@ export default function PreciseDaptCalculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+<p>
         Помогает определить оптимальную длительность двойной
         антиагрегантной терапии (ДАТТ) после стентирования: балл ≥25
         указывает на высокий риск внегоспитального кровотечения и
@@ -142,8 +146,13 @@ export default function PreciseDaptCalculator() {
         использует номограмму — здесь применена линейная аппроксимация
         по опубликованным контрольным точкам, поэтому при значениях
         около порога 25 баллов возможны небольшие расхождения с
-        графическим инструментом. Источник: Costa F, et al. Lancet.
+        графическим инструментом.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Costa F, et al. Lancet.
         2017;389(10073):1025-1034.
+        </p>
       </div>
 
     </div>

@@ -116,9 +116,15 @@ export default function PHQ9Calculator() {
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
+<p>
         Инструмент скрининга выраженности депрессивной симптоматики, не
-        заменяет клиническую диагностику. Источник: Kroenke K, Spitzer
+        заменяет клиническую диагностику.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Kroenke K, Spitzer
         RL, Williams JB. J Gen Intern Med. 2001;16(9):606-613.
+        </p>
       </div>
 
     </div>

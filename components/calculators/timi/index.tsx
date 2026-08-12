@@ -49,83 +49,87 @@ export default function TIMICalculator() {
 
       <CalculatorHeader calculatorId="timi" />
 
-      <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
+      <div className="grid gap-8 lg:grid-cols-[1fr_380px]">
 
-        <h2 className="mb-8 text-3xl font-bold">
-          Критерии риска
-        </h2>
+        <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
 
-        <div className="space-y-4">
+          <div className="mb-6 flex items-center justify-between">
 
-          <CheckboxCard
-            title="Возраст ≥65 лет"
-            points={1}
-            checked={data.age65}
-            onChange={() => toggle("age65")}
-          />
+            <h2 className="text-2xl font-bold">
+              Критерии риска
+            </h2>
 
-          <CheckboxCard
-            title="≥3 факторов риска ИБС"
-            description="Семейный анамнез ИБС, АГ, гиперхолестеринемия, сахарный диабет, курение"
-            points={1}
-            checked={data.riskFactors3}
-            onChange={() => toggle("riskFactors3")}
-          />
+            <button
+              onClick={resetCalculator}
+              className="text-sm font-medium text-gray-500 transition hover:text-gray-800"
+            >
+              Сбросить
+            </button>
 
-          <CheckboxCard
-            title="Известный стеноз коронарной артерии ≥50%"
-            points={1}
-            checked={data.knownCAD}
-            onChange={() => toggle("knownCAD")}
-          />
+          </div>
 
-          <CheckboxCard
-            title="Приём аспирина в предшествующие 7 дней"
-            points={1}
-            checked={data.aspirin7days}
-            onChange={() => toggle("aspirin7days")}
-          />
+          <div className="space-y-4">
 
-          <CheckboxCard
-            title="Тяжёлая стенокардия"
-            description="≥2 эпизодов за последние 24 часа"
-            points={1}
-            checked={data.severeAngina}
-            onChange={() => toggle("severeAngina")}
-          />
+            <CheckboxCard
+              title="Возраст ≥65 лет"
+              points={1}
+              checked={data.age65}
+              onChange={() => toggle("age65")}
+            />
 
-          <CheckboxCard
-            title="Смещение сегмента ST ≥0.5 мм"
-            description="На исходной ЭКГ"
-            points={1}
-            checked={data.stDeviation}
-            onChange={() => toggle("stDeviation")}
-          />
+            <CheckboxCard
+              title="≥3 факторов риска ИБС"
+              description="Семейный анамнез ИБС, АГ, гиперхолестеринемия, сахарный диабет, курение"
+              points={1}
+              checked={data.riskFactors3}
+              onChange={() => toggle("riskFactors3")}
+            />
 
-          <CheckboxCard
-            title="Повышение кардиоспецифичных маркеров"
-            description="Тропонин, МВ-КФК"
-            points={1}
-            checked={data.elevatedMarkers}
-            onChange={() => toggle("elevatedMarkers")}
-          />
+            <CheckboxCard
+              title="Известный стеноз коронарной артерии ≥50%"
+              points={1}
+              checked={data.knownCAD}
+              onChange={() => toggle("knownCAD")}
+            />
+
+            <CheckboxCard
+              title="Приём аспирина в предшествующие 7 дней"
+              points={1}
+              checked={data.aspirin7days}
+              onChange={() => toggle("aspirin7days")}
+            />
+
+            <CheckboxCard
+              title="Тяжёлая стенокардия"
+              description="≥2 эпизодов за последние 24 часа"
+              points={1}
+              checked={data.severeAngina}
+              onChange={() => toggle("severeAngina")}
+            />
+
+            <CheckboxCard
+              title="Смещение сегмента ST ≥0.5 мм"
+              description="На исходной ЭКГ"
+              points={1}
+              checked={data.stDeviation}
+              onChange={() => toggle("stDeviation")}
+            />
+
+            <CheckboxCard
+              title="Повышение кардиоспецифичных маркеров"
+              description="Тропонин, МВ-КФК"
+              points={1}
+              checked={data.elevatedMarkers}
+              onChange={() => toggle("elevatedMarkers")}
+            />
+
+          </div>
 
         </div>
 
-      </div>
-
-      <div className="flex justify-end">
-
-        <button
-          onClick={resetCalculator}
-          className="rounded-xl border border-gray-300 bg-white px-6 py-3 font-medium transition hover:bg-gray-100"
-        >
-          Сбросить расчёт
-        </button>
+        <Result recommendation={recommendation} />
 
       </div>
-
-      <Result recommendation={recommendation} />
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
         <p>

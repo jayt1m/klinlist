@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import CalculatorHeader from "@/components/ui/CalculatorHeader";
+import { useScrollToResult } from "@/lib/useScrollToResult";
 import InputWithUnit from "@/components/ui/InputWithUnit";
 import RadioCard from "@/components/ui/RadioCard";
 import ResultCard from "@/components/ui/ResultCard";
@@ -53,6 +54,8 @@ export default function ChildPughCalculator() {
           ? "Класс C — декомпенсированное заболевание"
           : "";
 
+
+  const resultRef = useScrollToResult(score !== null);
   return (
     <div className="mx-auto max-w-7xl space-y-10">
 
@@ -96,7 +99,7 @@ export default function ChildPughCalculator() {
 
         </div>
 
-        <div>
+        <div ref={resultRef}>
 
           {score !== null ? (
 
@@ -133,9 +136,12 @@ export default function ChildPughCalculator() {
           противопоказаны или требуют снижения дозы уже при классе
           B). Асцит и энцефалопатия оцениваются клинически и по
           определению субъективны — учитывайте это при пограничных
-          баллах. Источник: Pugh RN, et al. Br J Surg.
-          1973;60(8):646-649. Для точной оценки прогноза и очерёдности
+          баллах. Для точной оценки прогноза и очерёдности
           трансплантации печени используется шкала MELD.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Pugh RN, et al. Br J Surg. 1973;60(8):646-649.
         </p>
       </div>
 
