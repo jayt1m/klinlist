@@ -65,10 +65,10 @@ export default function CalculatorsListClient() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="🔍 Поиск калькулятора..."
-        className="mt-10 w-full rounded-2xl border border-gray-200 px-6 py-4 text-lg outline-none focus:border-blue-600"
+        className="mt-5 w-full rounded-2xl border border-gray-200 px-5 py-3.5 text-base outline-none focus:border-blue-600 sm:mt-8 sm:px-6 sm:py-4 sm:text-lg lg:mt-10"
       />
 
-      <div className="mt-6 flex flex-wrap gap-3">
+      <div className="mt-4 flex flex-wrap gap-2 sm:mt-6 sm:gap-3">
 
         <button
           onClick={() => setSpecialty("")}
@@ -121,14 +121,14 @@ export default function CalculatorsListClient() {
 
       ) : (
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
 
           {filtered.map((calc) => (
 
             <Link
               key={calc.id}
               href={`/calculators/${calc.id}`}
-              className="relative rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              className="relative rounded-3xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:p-8"
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="text-2xl font-bold">

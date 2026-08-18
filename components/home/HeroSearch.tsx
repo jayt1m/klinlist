@@ -36,7 +36,7 @@ export default function HeroSearch() {
 
   return (
 
-    <div className="relative mt-12 w-full max-w-3xl">
+    <div className="relative mt-5 w-full max-w-3xl sm:mt-8 lg:mt-12">
 
       <input
         type="text"
@@ -47,7 +47,7 @@ export default function HeroSearch() {
           setTimeout(() => setIsFocused(false), 150)
         }
         placeholder="🔍 Найти калькулятор..."
-        className="w-full rounded-2xl border border-gray-200 bg-white px-7 py-5 text-lg shadow-xl outline-none transition focus:border-blue-500"
+        className="w-full rounded-2xl border border-gray-200 bg-white px-5 py-4 text-base shadow-xl outline-none transition focus:border-blue-500 sm:px-7 sm:py-5 sm:text-lg"
       />
 
       {showDropdown && (
