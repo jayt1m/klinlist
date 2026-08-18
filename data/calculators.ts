@@ -952,4 +952,204 @@ export const calculators: Calculator[] = [
   icon: "Activity",
   color: "blue",
 },
+ {
+  id: "sirs",
+  title: "Критерии ССВО (SIRS)",
+  description:
+    "Синдром системного воспалительного ответа",
+  specialty: "Анестезиология и реаниматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "rass",
+  title: "Шкала RASS",
+  description:
+    "Оценка глубины седации и ажитации в ОРИТ",
+  specialty: "Анестезиология и реаниматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "oxygenation-index",
+  title: "Индекс оксигенации paO₂/FiO₂",
+  description:
+    "Тяжесть ОРДС по Берлинскому определению",
+  specialty: "Анестезиология и реаниматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "cage",
+  title: "CAGE",
+  description:
+    "Краткий скрининг проблемного употребления алкоголя",
+  specialty: "Психиатрия",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "tiffno",
+  title: "Индекс Тиффно",
+  description:
+    "ОФВ1/ФЖЕЛ — выявление бронхиальной обструкции",
+  specialty: "Пульмонология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "pack-years",
+  title: "Индекс курящего человека",
+  description:
+    "Расчёт пачка/лет и оценка риска ХОБЛ и рака лёгкого",
+  specialty: "Пульмонология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "six-minute-walk",
+  title: "Тест 6-минутной ходьбы",
+  description:
+    "Расчёт должной дистанции",
+  specialty: "Пульмонология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "peak-flow",
+  title: "Пиковая скорость выдоха",
+  description:
+    "Должные значения ПСВ и зоны контроля астмы",
+  specialty: "Пульмонология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "atherogenic-index",
+  title: "Коэффициент атерогенности",
+  description:
+    "Соотношение атерогенных и антиатерогенных липидов",
+  specialty: "Кардиология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "map-bp",
+  title: "Среднее артериальное давление",
+  description:
+    "Расчёт САД и пульсового давления",
+  specialty: "Кардиология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "teichholz",
+  title: "Фракция выброса по Тейхольцу",
+  description:
+    "Расчёт объёмов и ФВ левого желудочка из линейных размеров",
+  specialty: "Кардиология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "caro-index",
+  title: "Индекс Caro",
+  description:
+    "Отношение глюкозы к инсулину — оценка инсулинорезистентности",
+  specialty: "Эндокринология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "tyg-index",
+  title: "Индекс TyG",
+  description:
+    "Суррогатный маркер инсулинорезистентности без анализа на инсулин",
+  specialty: "Эндокринология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "ganzoni",
+  title: "Формула Ганзони",
+  description:
+    "Расчёт общего дефицита железа",
+  specialty: "Гематология",
+  category: "Дозирование",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "infusion-rate",
+  title: "Скорость инфузии",
+  description:
+    "Перевод объёма и времени в капли в минуту и мл/ч",
+  specialty: "Терапия",
+  category: "Дозирование",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "norton",
+  title: "Шкала Нортон",
+  description:
+    "Риск развития пролежней",
+  specialty: "Терапия",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "holliday-segar",
+  title: "Правило 4-2-1 (Холлидея-Сегара)",
+  description:
+    "Поддерживающая потребность в жидкости у детей",
+  specialty: "Педиатрия",
+  category: "Дозирование",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "pediatric-antipyretic",
+  title: "Жаропонижающие у детей",
+  description:
+    "Расчёт дозы парацетамола и ибупрофена по массе тела",
+  specialty: "Педиатрия",
+  category: "Дозирование",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "hyponatremia-correction",
+  title: "Коррекция гипонатриемии",
+  description:
+    "Расчёт изменения натрия по формуле Адрогé-Мадиаса",
+  specialty: "Нефрология",
+  category: "Дозирование",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "mrc-muscle",
+  title: "Шкала MRC",
+  description:
+    "Оценка мышечной силы",
+  specialty: "Неврология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
 ];

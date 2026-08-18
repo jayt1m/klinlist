@@ -79,14 +79,35 @@ export default function Header() {
 
           </nav>
 
-          {/* Кнопка мобильного меню */}
-          <button
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label={mobileOpen ? "Закрыть меню" : "Открыть меню"}
-            className="flex h-10 w-10 items-center justify-center rounded-xl text-gray-600 hover:bg-gray-100 md:hidden"
-          >
-            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          {/* Избранное + меню (мобильное) */}
+          <div className="flex items-center gap-1 md:hidden">
+
+            <Link
+              href="/favorites"
+              aria-label="Избранное"
+              className="relative flex h-10 w-10 items-center justify-center rounded-xl text-gray-600 hover:bg-gray-100"
+            >
+              <Star
+                className="h-5 w-5"
+                fill={favoritesCount > 0 ? "#fbbf24" : "none"}
+                stroke={favoritesCount > 0 ? "#f59e0b" : "currentColor"}
+              />
+              {favoritesCount > 0 && (
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-amber-400 px-1 text-[10px] font-bold text-white">
+                  {favoritesCount}
+                </span>
+              )}
+            </Link>
+
+            <button
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label={mobileOpen ? "Закрыть меню" : "Открыть меню"}
+              className="flex h-10 w-10 items-center justify-center rounded-xl text-gray-600 hover:bg-gray-100"
+            >
+              {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+
+          </div>
 
         </div>
 
@@ -110,20 +131,6 @@ export default function Header() {
             className="block py-3 text-base font-medium text-gray-700"
           >
             Перфузор
-          </Link>
-
-          <Link
-            href="/favorites"
-            onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-2 py-3 text-base font-medium text-gray-700"
-          >
-            <Star className="h-4 w-4" />
-            Избранное
-            {favoritesCount > 0 && (
-              <span className="flex h-5 min-w-[20px] items-center justify-center rounded-full bg-amber-400 px-1.5 text-xs font-bold text-white">
-                {favoritesCount}
-              </span>
-            )}
           </Link>
 
         </nav>

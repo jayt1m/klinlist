@@ -94,6 +94,26 @@ import OsmolarGapCalc from "@/components/calculators/osmolar-gap";
 import ShockIndexCalc from "@/components/calculators/shock-index";
 import FeureaCalc from "@/components/calculators/feurea";
 import CalciumPhosphateCalc from "@/components/calculators/calcium-phosphate";
+import SirsCalc from "@/components/calculators/sirs";
+import RassCalc from "@/components/calculators/rass";
+import OxygenationIndexCalc from "@/components/calculators/oxygenation-index";
+import CageCalc from "@/components/calculators/cage";
+import TiffnoCalc from "@/components/calculators/tiffno";
+import PackYearsCalc from "@/components/calculators/pack-years";
+import SixMinuteWalkCalc from "@/components/calculators/six-minute-walk";
+import PeakFlowCalc from "@/components/calculators/peak-flow";
+import AtherogenicIndexCalc from "@/components/calculators/atherogenic-index";
+import MapBpCalc from "@/components/calculators/map-bp";
+import TeichholzCalc from "@/components/calculators/teichholz";
+import CaroIndexCalc from "@/components/calculators/caro-index";
+import TygIndexCalc from "@/components/calculators/tyg-index";
+import GanzoniCalc from "@/components/calculators/ganzoni";
+import InfusionRateCalc from "@/components/calculators/infusion-rate";
+import NortonCalc from "@/components/calculators/norton";
+import HollidaySegarCalc from "@/components/calculators/holliday-segar";
+import PediatricAntipyreticCalc from "@/components/calculators/pediatric-antipyretic";
+import HyponatremiaCorrectionCalc from "@/components/calculators/hyponatremia-correction";
+import MrcMuscleCalc from "@/components/calculators/mrc-muscle";
 import { notFound } from "next/navigation";
 import { getCalculator } from "@/lib/getCalculator";
 
@@ -228,6 +248,26 @@ const calculatorComponents: Record<string, ComponentType> = {
   "shock-index": ShockIndexCalc,
   "feurea": FeureaCalc,
   "calcium-phosphate": CalciumPhosphateCalc,
+  "sirs": SirsCalc,
+  "rass": RassCalc,
+  "oxygenation-index": OxygenationIndexCalc,
+  "cage": CageCalc,
+  "tiffno": TiffnoCalc,
+  "pack-years": PackYearsCalc,
+  "six-minute-walk": SixMinuteWalkCalc,
+  "peak-flow": PeakFlowCalc,
+  "atherogenic-index": AtherogenicIndexCalc,
+  "map-bp": MapBpCalc,
+  "teichholz": TeichholzCalc,
+  "caro-index": CaroIndexCalc,
+  "tyg-index": TygIndexCalc,
+  "ganzoni": GanzoniCalc,
+  "infusion-rate": InfusionRateCalc,
+  "norton": NortonCalc,
+  "holliday-segar": HollidaySegarCalc,
+  "pediatric-antipyretic": PediatricAntipyreticCalc,
+  "hyponatremia-correction": HyponatremiaCorrectionCalc,
+  "mrc-muscle": MrcMuscleCalc,
 };
 
 export default async function CalculatorPage({ params }: Props) {
