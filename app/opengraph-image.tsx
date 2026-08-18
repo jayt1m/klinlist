@@ -40,7 +40,8 @@ export default async function Image() {
               width: 96,
               height: 96,
               borderRadius: 24,
-              background: "#2563eb",
+              background:
+                "linear-gradient(135deg, #3b82f6 0%, #2563eb 45%, #1e3a8a 100%)",
               color: "white",
               fontSize: 56,
               fontWeight: 700,

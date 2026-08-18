@@ -52,6 +52,9 @@ export default function CorrectedCalciumCalculator() {
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
         Скорректированный Ca (ммоль/л) = измеренный Ca + 0.02 × (40 − альбумин, г/л). Поправка нужна, поскольку около 40% кальция плазмы связано с альбумином — при гипоальбуминемии измеренный общий кальций занижает истинный уровень. При сомнении предпочтителен прямой анализ ионизированного кальция.
+        <p className="mt-3 text-xs text-gray-500">
+          Источник формулы: Payne RB, et al. Br Med J. 1973;4(5893):643-646.
+        </p>
       </div>
     </div>
   );

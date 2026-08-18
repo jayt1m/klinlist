@@ -752,4 +752,204 @@ export const calculators: Calculator[] = [
   icon: "Activity",
   color: "blue",
 },
+ {
+  id: "spesi",
+  title: "sPESI",
+  description:
+    "Упрощённый индекс тяжести ТЭЛА — прогноз 30-дневной летальности",
+  specialty: "Пульмонология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "atria",
+  title: "ATRIA",
+  description:
+    "Риск кровотечения при фибрилляции предсердий на антикоагулянтах",
+  specialty: "Кардиология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "timi-stemi",
+  title: "TIMI для ИМпST",
+  description:
+    "30-дневная летальность при инфаркте миокарда с подъёмом ST",
+  specialty: "Кардиология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "duke-endocarditis",
+  title: "Критерии Дьюка",
+  description:
+    "Диагностика инфекционного эндокардита",
+  specialty: "Кардиология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "maddrey",
+  title: "Дискриминантная функция Маддрея",
+  description:
+    "Тяжесть алкогольного гепатита",
+  specialty: "Гастроэнтерология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "light-criteria",
+  title: "Критерии Лайта",
+  description:
+    "Дифференциация экссудата и транссудата при плевральном выпоте",
+  specialty: "Пульмонология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "caprini",
+  title: "Шкала Caprini",
+  description:
+    "Риск венозных тромбоэмболических осложнений у хирургических пациентов",
+  specialty: "Хирургия",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "lrinec",
+  title: "LRINEC",
+  description:
+    "Лабораторный индикатор риска некротизирующего фасциита",
+  specialty: "Хирургия",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "parkland",
+  title: "Формула Паркленда",
+  description:
+    "Расчёт объёма инфузионной терапии при ожогах",
+  specialty: "Травматология",
+  category: "Дозирование",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "rule-of-nines",
+  title: "Правило девяток",
+  description:
+    "Оценка площади ожоговой поверхности",
+  specialty: "Травматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "ottawa-knee",
+  title: "Ottawa Knee Rule",
+  description:
+    "Показания к рентгенографии при травме коленного сустава",
+  specialty: "Травматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "gad7",
+  title: "GAD-7",
+  description:
+    "Скрининг генерализованного тревожного расстройства",
+  specialty: "Психиатрия",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "nihss",
+  title: "NIHSS",
+  description:
+    "Оценка тяжести неврологического дефицита при инсульте",
+  specialty: "Неврология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "barthel",
+  title: "Индекс Бартел",
+  description:
+    "Оценка независимости в повседневной жизни",
+  specialty: "Неврология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "morse",
+  title: "Шкала Морсе",
+  description:
+    "Риск падений у госпитализированных пациентов",
+  specialty: "Терапия",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "apfel",
+  title: "Шкала Apfel",
+  description:
+    "Риск послеоперационной тошноты и рвоты",
+  specialty: "Анестезиология и реаниматология",
+  category: "Риск",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "osmolar-gap",
+  title: "Осмолярный интервал",
+  description:
+    "Расчётная осмолярность и выявление токсичных спиртов",
+  specialty: "Анестезиология и реаниматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "shock-index",
+  title: "Шоковый индекс",
+  description:
+    "Быстрая оценка гемодинамической нестабильности",
+  specialty: "Анестезиология и реаниматология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "feurea",
+  title: "FeUrea",
+  description:
+    "Фракционная экскреция мочевины — дифференциальная диагностика ОПП",
+  specialty: "Нефрология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
+ {
+  id: "calcium-phosphate",
+  title: "Кальций-фосфорное произведение",
+  description:
+    "Оценка минерально-костных нарушений при ХБП",
+  specialty: "Нефрология",
+  category: "Диагностика",
+  icon: "Activity",
+  color: "blue",
+},
 ];

@@ -35,15 +35,11 @@ export default function Result({
   const format = (value: number) => value.toFixed(1);
 
   async function copyResult() {
-    const text = `СКФ (CKD-EPI): ${format(ckdEpi2009)} мл/мин/1,73м²
-
-СКФ (MDRD): ${format(mdrd)} мл/мин/1,73м²
-
-Клиренс креатинина (Cockcroft-Gault): ${format(cockcroftGault)} мл/мин
-
-Стадия: ${stage}
-
-${stageDescription}`;
+    const text =
+      `СКФ (CKD-EPI): ${format(ckdEpi2009)} мл/мин/1,73м²; ` +
+      `СКФ (MDRD): ${format(mdrd)} мл/мин/1,73м²; ` +
+      `клиренс креатинина (Cockcroft-Gault): ${format(cockcroftGault)} мл/мин; ` +
+      `стадия ${stage} — ${stageDescription}`;
 
     await navigator.clipboard.writeText(text);
   }

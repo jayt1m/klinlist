@@ -51,7 +51,10 @@ export default function FreeWaterDeficitCalculator() {
             <div className="rounded-3xl border border-blue-200 bg-blue-50 p-8">
               <div className="text-sm text-blue-700">Дефицит свободной воды</div>
               <div className="mt-2 text-5xl font-bold text-blue-900">{result}<span className="ml-2 text-lg font-normal">л</span></div>
-              <p className="mt-4 text-sm text-blue-900">Коррекцию гипернатриемии проводят постепенно — снижение натрия не более чем на 8–10 ммоль/л за 24 часа (риск отёка мозга при быстрой коррекции).</p>
+              <p className="mt-4 text-sm text-blue-900">Коррекцию гипернатриемии проводят постепенно — снижение натрия не более чем на 8–10 ммоль/л за 24 часа (риск отёка мозга при быстрой коррекции).
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Adrogué HJ, Madias NE. N Engl J Med. 2000;342(20):1493-1499.
+        </p></p>
             </div>
           ) : (
             <div className="flex h-full min-h-[260px] items-center justify-center rounded-3xl border border-dashed border-zinc-300 bg-zinc-50">

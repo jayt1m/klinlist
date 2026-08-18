@@ -78,6 +78,9 @@ export default function NaegeleCalculator() {
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
         Правило Негеле: ПДР = дата последней менструации + 280 дней (40 недель), с поправкой на отклонение длины цикла от стандартных 28 дней. Точность зависит от регулярности цикла — при известном сроке по УЗИ в I триместре предпочтительнее ультразвуковая оценка.
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: Naegele FK, 1812. Современные рекомендации по определению срока — ACOG Committee Opinion No. 700, 2017.
+        </p>
       </div>
     </div>
   );

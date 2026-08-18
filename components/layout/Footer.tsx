@@ -101,7 +101,7 @@ export default function Footer() {
         <div className="mt-8 flex flex-wrap items-center justify-between gap-6">
 
           <div className="flex items-center gap-2 text-lg font-bold">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm text-white">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-800 text-sm text-white shadow-sm">
               К
             </div>
             Клин<span className="text-blue-600">Лист</span>

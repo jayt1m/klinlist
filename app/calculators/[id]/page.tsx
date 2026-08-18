@@ -74,6 +74,26 @@ import NexusCalc from "@/components/calculators/nexus";
 import RevisedTraumaCalc from "@/components/calculators/revised-trauma";
 import NaegeleCalc from "@/components/calculators/naegele";
 import WaistHipRatioCalc from "@/components/calculators/waist-hip-ratio";
+import SpesiCalc from "@/components/calculators/spesi";
+import AtriaCalc from "@/components/calculators/atria";
+import TimiStemiCalc from "@/components/calculators/timi-stemi";
+import DukeEndocarditisCalc from "@/components/calculators/duke-endocarditis";
+import MaddreyCalc from "@/components/calculators/maddrey";
+import LightCriteriaCalc from "@/components/calculators/light-criteria";
+import CapriniCalc from "@/components/calculators/caprini";
+import LrinecCalc from "@/components/calculators/lrinec";
+import ParklandCalc from "@/components/calculators/parkland";
+import RuleOfNinesCalc from "@/components/calculators/rule-of-nines";
+import OttawaKneeCalc from "@/components/calculators/ottawa-knee";
+import Gad7Calc from "@/components/calculators/gad7";
+import NihssCalc from "@/components/calculators/nihss";
+import BarthelCalc from "@/components/calculators/barthel";
+import MorseCalc from "@/components/calculators/morse";
+import ApfelCalc from "@/components/calculators/apfel";
+import OsmolarGapCalc from "@/components/calculators/osmolar-gap";
+import ShockIndexCalc from "@/components/calculators/shock-index";
+import FeureaCalc from "@/components/calculators/feurea";
+import CalciumPhosphateCalc from "@/components/calculators/calcium-phosphate";
 import { notFound } from "next/navigation";
 import { getCalculator } from "@/lib/getCalculator";
 
@@ -188,6 +208,26 @@ const calculatorComponents: Record<string, ComponentType> = {
   "revised-trauma": RevisedTraumaCalc,
   "naegele": NaegeleCalc,
   "waist-hip-ratio": WaistHipRatioCalc,
+  "spesi": SpesiCalc,
+  "atria": AtriaCalc,
+  "timi-stemi": TimiStemiCalc,
+  "duke-endocarditis": DukeEndocarditisCalc,
+  "maddrey": MaddreyCalc,
+  "light-criteria": LightCriteriaCalc,
+  "caprini": CapriniCalc,
+  "lrinec": LrinecCalc,
+  "parkland": ParklandCalc,
+  "rule-of-nines": RuleOfNinesCalc,
+  "ottawa-knee": OttawaKneeCalc,
+  "gad7": Gad7Calc,
+  "nihss": NihssCalc,
+  "barthel": BarthelCalc,
+  "morse": MorseCalc,
+  "apfel": ApfelCalc,
+  "osmolar-gap": OsmolarGapCalc,
+  "shock-index": ShockIndexCalc,
+  "feurea": FeureaCalc,
+  "calcium-phosphate": CalciumPhosphateCalc,
 };
 
 export default async function CalculatorPage({ params }: Props) {

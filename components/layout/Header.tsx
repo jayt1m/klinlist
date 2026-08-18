@@ -42,7 +42,7 @@ export default function Header() {
 
           {/* Логотип */}
           <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-lg font-bold text-white">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-800 text-lg font-bold text-white shadow-sm">
               К
             </div>
 

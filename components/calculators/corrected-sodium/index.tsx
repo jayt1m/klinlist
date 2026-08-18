@@ -49,6 +49,9 @@ export default function CorrectedSodiumCalculator() {
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
         Скорректированный Na (ммоль/л) = измеренный Na + 1.6 × (глюкоза − 5.5) / 5.5 (глюкоза в ммоль/л). Выраженная гипергликемия вызывает осмотический выход воды из клеток, разбавляя измеренный натрий — истинный дефицит воды может быть замаскирован. Некоторые источники используют коэффициент 2.4 при очень высокой гликемии.
+        <p className="mt-3 text-xs text-gray-500">
+          Источники: Katz MA. N Engl J Med. 1973;289(16):843-844. Hillier TA, et al. Am J Med. 1999;106(4):399-403.
+        </p>
       </div>
     </div>
   );

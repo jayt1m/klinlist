@@ -12,14 +12,27 @@ export async function GET() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#2563eb",
+          background:
+            "linear-gradient(135deg, #3b82f6 0%, #2563eb 45%, #1e3a8a 100%)",
+          position: "relative",
         }}
       >
         <div
           style={{
+            position: "absolute",
+            top: -32,
+            left: -32,
+            width: 120,
+            height: 120,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(255,255,255,0.4), rgba(255,255,255,0) 70%)",
+          }}
+        />
+        <div
+          style={{
             display: "flex",
             color: "white",
-            fontSize: 104,
+            fontSize: 108,
             fontWeight: 800,
             fontFamily: "sans-serif",
           }}

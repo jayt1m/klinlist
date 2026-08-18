@@ -55,6 +55,9 @@ export default function WaistHipRatioCalculator() {
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm leading-6 text-gray-600">
         По критериям ВОЗ абдоминальное ожирение (повышенный сердечно-сосудистый и метаболический риск) — при отношении &gt;0.90 у мужчин и &gt;0.85 у женщин. Отражает распределение жировой ткани лучше, чем изолированный ИМТ.
+        <p className="mt-3 text-xs text-gray-500">
+          Источник: WHO. Waist Circumference and Waist-Hip Ratio: Report of a WHO Expert Consultation. Geneva, 2008.
+        </p>
       </div>
     </div>
   );
